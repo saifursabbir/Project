@@ -5,3 +5,11 @@ function startFan() {
 }
 //call the function
 startFan();
+console.log('eat breakfast');
+console.log('Drink tea');
+console.log('take a shower');
+startFan();
+var country = "bd";
+var city = "Dhaka";
+var location = 'Gulisthan';
+startFan();
