@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #second-title {
+            background-color: chocolate;
+        } */
+        /* .black {
+            border: 2px solid orange;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 10px;
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my blog website</h1>
+    </header>
+    <main>
+        <section id="blogs">
+            <header>
+                <h2>Blog list</h2>
+                <ul id="blog-list">
+                    <li>Blog-1</li>
+                    <li>Blog-2</li>
+                    <li>Blog-3</li>
+                    <li>Blog-4</li>
+                </ul>
+            </header>
+            <article class="black">
+                <h3>My Awesome Blog-1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, velit! Possimus, consequatur iusto?
+                    Commodi perferendis natus, corporis quos dolorem animi laudantium! Magni cumque quasi magnam iste?
+                    Quia tempora autem totam?</p>
+            </article>
+            <article class="black">
+                <h3 id="second-title">My Awesome Blog-2</h3>
+                <p>Consequatur, nemo! Et nam molestiae provident! Accusamus explicabo repudiandae amet nihil unde
+                    expedita, est dolorem veniam error dicta sint recusandae ducimus. Voluptatem reprehenderit dolorum
+                    fugiat quaerat harum nihil, beatae dolore.</p>
+            </article>
+            <article>
+                <h3 id="third-title">My Awesome Blog-3</h3>
+                <p>Ducimus omnis deleniti ratione quo explicabo maiores illo natus optio est voluptate. Molestias,
+                    accusamus vel totam voluptatum corporis perferendis nulla voluptate odit repudiandae nemo ullam
+                    inventore ratione. Culpa, harum soluta!</p>
+            </article>
+            <article class="">
+                <h3>My Awesome Blog-4</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, velit! Possimus, consequatur iusto?
+                    Commodi perferendis natus, corporis quos dolorem animi laudantium! Magni cumque quasi magnam iste?
+                    Quia tempora autem totam?</p>
+            </article </section>
+
+    </main>
+    <script>
+        const student = { name: 'kissmot Ali', age: 16, height: 60 };
+        // console.log(document.body)
+
+        const blogTitle = document.getElementsByTagName('h3');
+        for (const h3 of blogTitle) {
+            // console.log(h3.innerText);
+        }
+
+        const blogDetails = document.getElementsByTagName('p');
+        for (const p of blogDetails) {
+            // console.log(p.innerText);
+        }
+        // explore getElementById 
+
+        const secondTitle = document.getElementById('second-title');
+        secondTitle.style.textAlign = 'center';
+
+        const third = document.getElementById('third-title');
+        third.innerText = 'title updated by Js';
+        third.style.backgroundColor = 'salmon';
+        third.style.padding = '10px';
+        third.style.marginLeft = '20px';
+        // Explore getElementsByClassName
+
+        const blacks = document.getElementsByClassName('black');
+        for (const black of blacks) {
+            black.style.border = '2px solid orange';
+            black.style.borderRadius = '10px';
+        }
+
+        // create and add element by using JS
+        const li = document.createElement('li');
+        li.innerText = 'blog-5';
+
+        // where to add
+        const ul = document.getElementById('blog-list');
+
+        // appen new element
+        ul.appendChild(li);
+
+        // add article 
+        const article = document.createElement('article');
+        article.classList.add('black');
+        const h3 = document.createElement('h3');
+        h3.innerText = 'My Awesome Blog-4';
+        const p = document.createElement('p');
+        p.innerText = 'Commodi perferendis natus, corporis quos dolorem animi laudantium! Magni cumque quasi magnam iste?';
+        article.appendChild(h3);
+        article.appendChild(p);
+
+        // parent of article
+        const blogSection = document.getElementById(blogs);
+        blogSection.appendChild(article);
+
+
+
+    </script>
+
+</body>
+
+</html>
