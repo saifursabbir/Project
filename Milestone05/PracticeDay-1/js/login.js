@@ -8,6 +8,8 @@ loginBtn.addEventListener('click', function () {
         window.location.href = "banking1.html"
     }
     else {
-        alert("Your entered Email and Password is not correct")
-    }
+        // alert("Your entered Email and Password is not correct")
+        const errorMessage = document.getElementById("error-message");
+
+    };
 });
